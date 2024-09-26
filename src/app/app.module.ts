@@ -22,6 +22,7 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 
 import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './nav/nav.component';
+import { ResumeComponent } from './resume/resume.component';
 
 const approutes: Routes = [
   { path: "project/:id", component: ProjectDetailsComponent }
@@ -36,6 +37,7 @@ const approutes: Routes = [
     ContactComponent,
     ProjectsComponent,
     NavComponent,
+    ResumeComponent,
   ],
   imports: [
     BrowserModule,
