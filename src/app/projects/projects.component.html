@@ -1,0 +1,21 @@
+<mat-card *ngFor="let project of filteredProjects">
+  <mat-card-header>
+    <div mat-card-avatar class="mat-card-avatar"></div>
+    <mat-card-title>{{project.id}}. {{project.title}}</mat-card-title>
+    <mat-card-subtitle>{{project.subtitle}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img [src]="project.imgSrc" alt="{{project.title}}" />
+    <p></p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-icon-button class="iconsize" [id]="project.id" (click)="likeCard(project.id)" color="primary">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-raised-button [routerLink]="['/project', project.id]" color="accent">
+      Explore Project
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<hr>
