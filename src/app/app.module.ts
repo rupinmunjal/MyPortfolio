@@ -21,6 +21,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { NavComponent } from './nav/nav.component';
 
 const approutes: Routes = [
   { path: "project/:id", component: ProjectDetailsComponent }
@@ -34,6 +35,7 @@ const approutes: Routes = [
     FooterComponent,
     ContactComponent,
     ProjectsComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
