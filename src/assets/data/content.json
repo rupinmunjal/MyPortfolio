@@ -1,16 +1,15 @@
 {
-		"name": "Rupin Munjal",
-		"occupation": "Student",
-		"motto": "To retire by late 20s",
-		"about": "I'm Rupin Munjal, studying SDNE at Sheridan. I'm passionate about technology and have a love for gaming.",
-		"contacts": [
-			{
-				"href": "https://www.linkedin.com/in/rupinmunjal/",
-				"title": "LinkedIn"
-			},
-			{
-				"href": "https://www.github.com/rupinmunjal/",
-				"title": "GitHub"
-			}
-		]
+	"name": "Rupin Munjal",
+	"occupation": "Full-stack Developer",
+	"about": "Hi, I am Rupin Munjal, a passionate Software Development and Network Engineering student at Sheridan College. With a keen interest in cloud technologies and AI, I strive to create innovative solutions that enhance user experiences. Welcome to my portfolio, where you can explore my projects and learn more about my journey in tech!",
+	"aboutme": "I am Rupin Munjal, currently pursuing an advanced diploma in Software Development and Network Engineering at Sheridan College and an online B.Sc. in Programming and Data Science from IIT Madras. My journey in technology began with a fascination for problem-solving and innovation. I have developed skills in web development, cloud technologies, and data science, which I continually expand through hands-on projects and internships.Throughout my studies, I have completed various projects, including a personal portfolio using Angular, a secure communication system in the cloud, and a car dealership application using Spring Boot and JavaScript. I am particularly passionate about AI and its potential to optimize processes and improve lives. In my spare time, I enjoy participating in tech competitions and learning new programming languages. My goal is to leverage my skills to contribute to impactful projects in the tech industry. Thank you for visiting my portfolio!","contacts": [
+		{
+			"href": "https://www.linkedin.com/in/rupinmunjal/",
+			"title": "LinkedIn"
+		},
+		{
+			"href": "https://www.github.com/rupinmunjal/",
+			"title": "GitHub"
+		}
+	]
 }
