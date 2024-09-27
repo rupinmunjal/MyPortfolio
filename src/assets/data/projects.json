@@ -2,33 +2,27 @@
 	"projects": [
 		{
 			"id": 1,
-			"title": "Secure Cloud",
-			"subtitle": "A cloud-based platform",
-			"imgSrc": "assets/images/img1.png"
+			"title": "Car Dealership Management System",
+			"subtitle": "A web platform for managing car listings",
+			"description": "A responsive web application built using Spring Boot for backend and HTML/CSS for frontend, allowing users to easily add, remove, and manage car listings in a user-friendly interface.",
+			"projectLink": "link",
+			"imgSrc": "assets/images/img1.png",
+			"tags": [
+				"Spring Boot",
+				"Java"
+			]
 		},
 		{
 			"id": 2,
-			"title": "Athletic Centre Database",
-			"subtitle": "Database for a big gym corporation",
-			"imgSrc": "assets/images/img2.png"
-		},
-		{
-			"id": 3,
-			"title": "Global Cuisine Website",
-			"subtitle": "A website for cuisines all across the globe",
-			"imgSrc": "assets/images/img3.png"
-		},
-		{
-			"id": 4,
-			"title": "Angular Project",
-			"subtitle": "It is an angular project using various kind of new features",
-			"imgSrc": "assets/images/img4.png"
-		},
-		{
-			"id": 5,
-			"title": "Covid Vaccine Management System",
-			"subtitle": "A database platform to manage the covid vaccine distribution",
-			"imgSrc": "assets/images/img5.png"
-		}
+			"title": "Car Dealership Management System",
+			"subtitle": "A web platform for managing car listings",
+			"description": "A responsive web application built using Spring Boot for backend and HTML/CSS for frontend, allowing users to easily add, remove, and manage car listings in a user-friendly interface.",
+			"projectLink": "link",
+			"imgSrc": "assets/images/img1.png",
+			"tags": [
+				"Java",
+				"Spring Boot"
+			]
+		}		
 	]
 }

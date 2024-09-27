@@ -9,18 +9,12 @@ import { HttpClient } from '@angular/common/http';
 export class HeaderComponent {
   constructor( private http: HttpClient) { }
   
-  content!: any;
-  name!: string;
-  occupation!: string;
-  motto!: string;
+  personal!: any;
 
   getContent() {
     let url = 'assets/data/content.json';
     this.http.get(url).subscribe((res) => {
-      this.content = res;
-      this.name = this.content.name;
-      this.occupation = this.content.occupation;
-      this.motto = this.content.motto;
+      this.personal = res;
     });
   }
 

@@ -1,4 +1,4 @@
-<mat-card *ngFor="let project of filteredProjects">
+<!-- <mat-card *ngFor="let project of filteredProjects">
   <mat-card-header>
     <div mat-card-avatar class="mat-card-avatar"></div>
     <mat-card-title>{{project.id}}. {{project.title}}</mat-card-title>
@@ -18,4 +18,12 @@
   </mat-card-actions>
 </mat-card>
 
-<hr>
+<hr> -->
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let project of projectsArray" class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center">
+      <app-project-card [project]="project"></app-project-card>
+    </div>
+  </div>
+</div>

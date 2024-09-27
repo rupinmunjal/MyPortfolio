@@ -1,16 +1,16 @@
 {
-	"name": "Rupin Munjal",
-	"occupation": "Student",
-	"motto": "To retire by late 20s",
-	"about": "I'm Rupin Munjal, studying SDNE at Sheridan. I'm passionate about technology and have a love for gaming.",
-	"contacts": [
-		{
-			"href": "https://www.linkedin.com/in/rupinmunjal/",
-			"title": "LinkedIn"
-		},
-		{
-			"href": "https://www.github.com/rupinmunjal/",
-			"title": "GitHub"
-		}
-	]
+		"name": "Rupin Munjal",
+		"occupation": "Student",
+		"motto": "To retire by late 20s",
+		"about": "I'm Rupin Munjal, studying SDNE at Sheridan. I'm passionate about technology and have a love for gaming.",
+		"contacts": [
+			{
+				"href": "https://www.linkedin.com/in/rupinmunjal/",
+				"title": "LinkedIn"
+			},
+			{
+				"href": "https://www.github.com/rupinmunjal/",
+				"title": "GitHub"
+			}
+		]
 }

@@ -18,12 +18,11 @@ import { CardbuttonsService } from './cardbuttons.service';
 
 import { Routes, RouterModule } from '@angular/router';
 
-import { ProjectDetailsComponent } from './project-details/project-details.component';
-
 import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './nav/nav.component';
 import { ResumeComponent } from './resume/resume.component';
 import { HomeComponent } from './home/home.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
 
 const approutes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -45,6 +44,7 @@ const approutes: Routes = [
     NavComponent,
     ResumeComponent,
     HomeComponent,
+    ProjectCardComponent,
   ],
   imports: [
     BrowserModule,
