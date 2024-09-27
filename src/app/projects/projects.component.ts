@@ -10,31 +10,21 @@ import { Title } from '@angular/platform-browser';
 })
 
 export class ProjectsComponent {
-  filterText: string = "";
-  filteredProjects: any[] = [];
-
-  projectsArray: any[] = [];
-  project!: any;
-
   constructor(private cardService: CardbuttonsService, private http: HttpClient, private titleService: Title) {
     this.titleService.setTitle("Rupin Munjal | Projects");
   }
 
+  projects!: any;
+
   getProject() {
     let url = 'assets/data/projects.json';
     this.http.get<any[]>(url).subscribe((res) => {
-      this.project = res;
-      this.projectsArray = this.project.projects;
-      this.filteredProjects = [...this.projectsArray];
+      this.projects = res;
     });
   }
 
   ngOnInit() {
     this.getProject();
-  }
-
-  filterProjects() {
-    this.filteredProjects = this.projectsArray.filter((project) => project.title.toLowerCase().includes(this.filterText.toLowerCase()));
   }
 
   likeCard(elem: any) {
