@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Title } from '@angular/platform-browser';
 
@@ -8,22 +8,21 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-  content!: any;
-  about!:string;
-
   constructor(private titleService: Title, private http: HttpClient) {
-    this.titleService.setTitle('Rupin Munjal | About');
-  }  
+    this.titleService.setTitle('Rupin Munjal | About'); // Setting the page title in the constructor
+  }
 
+  personal!: any; // Variable to hold personal data
+
+  // Method to fetch content from a JSON file
   getContent() {
-    let url = 'assets/data/content.json';
+    let url = 'assets/data/content.json'; // URL to the JSON file
     this.http.get(url).subscribe((res) => {
-      this.content = res;
-      this.about = this.content.about;
+      this.personal = res; // Assigning the response to the personal variable
     });
   }
 
-  ngOnInit(){
-    this.getContent();
+  ngOnInit() {
+    this.getContent(); // Fetch content when the component initializes
   }
 }
