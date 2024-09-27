@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CardbuttonsService } from '../cardbuttons.service';
 import { HttpClient } from '@angular/common/http';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-projects',
@@ -15,7 +16,9 @@ export class ProjectsComponent {
   projectsArray: any[] = [];
   project!: any;
 
-  constructor(private cardService: CardbuttonsService, private http: HttpClient) { }
+  constructor(private cardService: CardbuttonsService, private http: HttpClient, private titleService: Title) {
+    this.titleService.setTitle("Rupin Munjal | Projects");
+  }
 
   getProject() {
     let url = 'assets/data/projects.json';
@@ -26,7 +29,7 @@ export class ProjectsComponent {
     });
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.getProject();
   }
 

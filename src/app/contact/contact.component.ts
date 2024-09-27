@@ -1,5 +1,6 @@
 import { Component,Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +11,9 @@ export class ContactComponent {
   content!: any;
   contacts!: any[];
 
-  constructor(private http: HttpClient) { }
+  constructor(private titleService: Title, private http: HttpClient) {
+    this.titleService.setTitle('Rupin Munjal | Contact');
+  }  
 
   getContent() {
     let url = 'assets/data/content.json';

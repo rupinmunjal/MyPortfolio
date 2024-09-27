@@ -23,9 +23,15 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './nav/nav.component';
 import { ResumeComponent } from './resume/resume.component';
+import { HomeComponent } from './home/home.component';
 
 const approutes: Routes = [
-  { path: "project/:id", component: ProjectDetailsComponent }
+  { path: 'home', component: HomeComponent},
+  { path: 'about', component: AboutComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'resume', component: ResumeComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: '**', component: HomeComponent, pathMatch:'full'}
 ];
 
 @NgModule({
@@ -38,6 +44,7 @@ const approutes: Routes = [
     ProjectsComponent,
     NavComponent,
     ResumeComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
