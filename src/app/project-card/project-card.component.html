@@ -1,12 +1,12 @@
 <div class="card shadow text-center" style="max-width: 350px; min-width: 350px;">
-    <h5 class="card-header">{{ project.title }}</h5>
+    <h5 class="card-header">{{ projects.title }}</h5>
     <div class="card-body">
-        <p class="card-text">{{ project.subtitle }}</p>
+        <p class="card-text">{{ projects.subtitle }}</p>
         <button class="btn btn-primary" (click)="openProjectModal()">View More</button>
     </div>
     <div class="card-footer">
         <div class="d-flex flex-wrap justify-content-center">
-            <div *ngFor="let tag of project.tags" class="tag me-2 mb-1"
+            <div *ngFor="let tag of projects.tags" class="tag me-2 mb-1"
                 [ngStyle]="{'background-color': getTagColor(tag)}">
                 {{ tag }}
             </div>

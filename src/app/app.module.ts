@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
@@ -51,7 +52,8 @@ const approutes: Routes = [
     FormsModule,
     RouterModule.forRoot(approutes),
     HttpClientModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    CarouselModule.forRoot()
   ],
   bootstrap: [AppComponent]
 })

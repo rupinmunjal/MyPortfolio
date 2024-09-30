@@ -9,7 +9,7 @@ import { ProjectModalComponent } from '../project-modal/project-modal.component'
   styleUrls: ['./project-card.component.css']
 })
 export class ProjectCardComponent {
-  @Input() project: any;
+  @Input() projects!: any;
 
   modalRef?: BsModalRef;
 
@@ -17,11 +17,14 @@ export class ProjectCardComponent {
 
   openProjectModal() {
     const modalOptions: ModalOptions = {
-      class: "modal-lg"
+      class: "modal-lg",
+      initialState: {
+        projects: this.projects 
+      }
     };
-
+  
     this.modalRef = this.modalService.show(ProjectModalComponent, modalOptions);
-  }
+  }  
 
   getTagColor(tag: string) {
     return this.tagColorService.getTagColor(tag);

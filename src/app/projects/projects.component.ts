@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./projects.component.css']
 })
 
-export class ProjectsComponent {
+export class ProjectsComponent{
   constructor(private http: HttpClient, private titleService: Title) {
     this.titleService.setTitle("Rupin Munjal | Projects");
   }
