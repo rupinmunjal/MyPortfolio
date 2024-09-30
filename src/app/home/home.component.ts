@@ -9,11 +9,14 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class HomeComponent {
-  constructor(private titleService: Title, private http: HttpClient) {
+  constructor(private titleService: Title, private http: HttpClient){
     this.titleService.setTitle('Rupin Munjal | Home'); // Setting the page title in the constructor
   }
 
   personal!: any; // Variable to hold personal data
+  projects!: any; // Variable to hold project data
+
+  featuredProject: number = 1;
 
   // Method to fetch content from a JSON file
   getContent() {
@@ -23,7 +26,15 @@ export class HomeComponent {
     });
   }
 
+  getProject() {
+    let url = 'assets/data/projects.json';
+    this.http.get<any[]>(url).subscribe((res) => {
+      this.projects = res;
+    });
+  }
+
   ngOnInit() {
     this.getContent(); // Fetch content when the component initializes
+    this.getProject();
   }
 }
