@@ -18,6 +18,7 @@ import { NavComponent } from './nav/nav.component';
 import { ResumeComponent } from './resume/resume.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
+import { ProjectModalComponent } from './project-modal/project-modal.component';
 
 const approutes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -40,6 +41,7 @@ const approutes: Routes = [
     ResumeComponent,
     HomeComponent,
     ProjectCardComponent,
+    ProjectModalComponent,
   ],
   imports: [
     BrowserModule,
