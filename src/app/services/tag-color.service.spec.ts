@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CardbuttonsService } from './cardbuttons.service';
+import { TagColorService } from './tag-color.service';
 
-describe('CardbuttonsService', () => {
-  let service: CardbuttonsService;
+describe('TagColorService', () => {
+  let service: TagColorService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CardbuttonsService);
+    service = TestBed.inject(TagColorService);
   });
 
   it('should be created', () => {

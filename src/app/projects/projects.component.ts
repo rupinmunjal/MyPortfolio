@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { CardbuttonsService } from '../cardbuttons.service';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Title } from '@angular/platform-browser';
 
@@ -10,7 +9,7 @@ import { Title } from '@angular/platform-browser';
 })
 
 export class ProjectsComponent {
-  constructor(private cardService: CardbuttonsService, private http: HttpClient, private titleService: Title) {
+  constructor(private http: HttpClient, private titleService: Title) {
     this.titleService.setTitle("Rupin Munjal | Projects");
   }
 
@@ -25,9 +24,5 @@ export class ProjectsComponent {
 
   ngOnInit() {
     this.getProject();
-  }
-
-  likeCard(elem: any) {
-    this.cardService.likeCard(elem);
   }
 }
