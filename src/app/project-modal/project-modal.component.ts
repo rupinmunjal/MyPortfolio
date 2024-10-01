@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
+import { TagColorService } from '../services/tag-color.service';
 
 @Component({
   selector: 'app-project-modal',
@@ -9,5 +10,9 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 export class ProjectModalComponent {
   @Input() projects!: any;
 
-  constructor(public modalRef: BsModalRef) { }
+  constructor(public modalRef: BsModalRef, private tagColorService: TagColorService) { }
+
+  getTagColor(tag: string) {
+    return this.tagColorService.getTagColor(tag);
+  }
 }

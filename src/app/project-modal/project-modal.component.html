@@ -8,4 +8,15 @@
             <img [src]="projects.imgSrc" alt="Slide" style="display: block; width: 100%;">
         </slide>
     </carousel>
+    <h3 class="mt-2">Description</h3>
+    <p>{{ projects.description }}</p>
+    <p>Links</p>
+
+    <hr>
+
+    <div class="d-flex flex-wrap">
+        <div *ngFor="let tag of projects.tags" class="tag me-2 mb-1" [ngStyle]="{'background-color': getTagColor(tag)}">
+            {{ tag }}
+        </div>
+    </div>
 </div>
