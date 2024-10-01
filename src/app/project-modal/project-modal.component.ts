@@ -8,7 +8,7 @@ import { TagColorService } from '../services/tag-color.service';
   styleUrls: ['./project-modal.component.css']
 })
 export class ProjectModalComponent {
-  @Input() projects!: any;
+  @Input() project!: any;
 
   constructor(public modalRef: BsModalRef, private tagColorService: TagColorService) { }
 

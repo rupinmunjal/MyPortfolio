@@ -1,21 +1,21 @@
 <div class="modal-header">
-    <h2>{{ projects.title }}</h2>
+    <h2>{{ project.title }}</h2>
     <button class="btn-close" (click)="modalRef.hide()"></button>
 </div>
 <div class="modal-body">
     <carousel>
         <slide>
-            <img [src]="projects.imgSrc" alt="Slide" style="display: block; width: 100%;">
+            <img [src]="project.imgSrc" alt="Slide" style="display: block; width: 100%;">
         </slide>
     </carousel>
     <h3 class="mt-2">Description</h3>
-    <p>{{ projects.description }}</p>
+    <p>{{ project.description }}</p>
     <p>Links</p>
 
     <hr>
 
     <div class="d-flex flex-wrap">
-        <div *ngFor="let tag of projects.tags" class="tag me-2 mb-1" [ngStyle]="{'background-color': getTagColor(tag)}">
+        <div *ngFor="let tag of project.tags" class="tag me-2 mb-1" [ngStyle]="{'background-color': getTagColor(tag)}">
             {{ tag }}
         </div>
     </div>

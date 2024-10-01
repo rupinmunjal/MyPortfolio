@@ -9,7 +9,7 @@ import { ProjectModalComponent } from '../project-modal/project-modal.component'
   styleUrls: ['./project-card.component.css']
 })
 export class ProjectCardComponent {
-  @Input() projects!: any;
+  @Input() project!: any;
 
   modalRef?: BsModalRef;
 
@@ -19,7 +19,7 @@ export class ProjectCardComponent {
     const modalOptions: ModalOptions = {
       class: "modal-lg",
       initialState: {
-        projects: this.projects 
+        project: this.project
       }
     };
   

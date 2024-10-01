@@ -1,14 +1,14 @@
 <div class="card shadow text-center" style="max-width: 350px; min-width: 350px;">
-    <img [src]="projects.imgSrc" alt="Project Image">
+    <img [src]="project.imgSrc" alt="Project Image">
     <div class="card-body">
-        <h4 class="card-title">{{ projects.title }}</h4>
-        <h6 class="card-subtitle mt-3 mb-3 text-muted">{{ projects.subtitle }}</h6>
+        <h4 class="card-title">{{ project.title }}</h4>
+        <h6 class="card-subtitle mt-3 mb-3 text-muted">{{ project.subtitle }}</h6>
         <div class="d-flex justify-content-around">
             <!-- Button for Live Preview -->
-            <a class="btn btn-success" href="{{ projects.liveLink }}" target="_blank">Live Preview</a>
+            <a class="btn btn-success" href="{{ project.liveLink }}" target="_blank">Live Preview</a>
 
             <!-- Button for GitHub link -->
-            <a class="btn btn-dark" href="{{ projects.githubLink }}" target="_blank">GitHub</a>
+            <a class="btn btn-dark" href="{{ project.githubLink }}" target="_blank">GitHub</a>
             
             <!-- Button for opening modal -->
             <button class="btn btn-info" (click)="openProjectModal()">View More</button>
@@ -16,7 +16,7 @@
     </div>
     <div class="card-footer">
         <div class="d-flex flex-wrap justify-content-center">
-            <div *ngFor="let tag of projects.tags" class="tag me-2 mb-1"
+            <div *ngFor="let tag of project.tags" class="tag me-2 mb-1"
                 [ngStyle]="{'background-color': getTagColor(tag)}">
                 {{ tag }}
             </div>
