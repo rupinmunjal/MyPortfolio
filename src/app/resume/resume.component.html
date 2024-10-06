@@ -1,44 +1,115 @@
-<div class="containter text-center">
-    <button (click)="downloadResume()" class="btn btn-primary me-2 mb-5 shadow border">
+<div class="container text-center">
+    <!-- Buttons for downloading and viewing the resume -->
+    <button (click)="downloadResume()" class="btn btn-primary me-2 mb-3 shadow border">
         Download PDF Resume
     </button>
-    <button (click)="viewResume()" class="btn btn-primary mb-5 shadow border">
+    <button (click)="viewResume()" class="btn btn-primary me-2 mb-3 shadow border">
         View Resume
     </button>
 
-    <div class="pb-2 mx-auto w-75">
+    <div class="mx-auto">
         <accordion [isAnimated]="true" class="shadow">
+
+            <!-- Accordion group for Education -->
             <accordion-group [(isOpen)]="isEducationOpen">
-                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                <button class="btn justify-content-between d-flex w-100" accordion-heading>
                     <div style="visibility: hidden;">></div>
                     <div class="btn-link">Education</div>
-
                     <div style="width: 10.95px;">
                         <div *ngIf="!isEducationOpen" style="color: white;">></div>
                         <div *ngIf="isEducationOpen" style="color: white;">v</div>
                     </div>
                 </button>
-                <div style="text-align: left;">
-                    <h2 class="mb-0">Computer Systems Technology - Software Development and Network Engineering</h2>
-                    <h3 class="text-primary">Sheridan College</h3>
+
+                <!-- Loop through each education entry -->
+                <div *ngFor="let edu of resume.education; let i = index; let last = last" style="text-align: left;">
+                    <h3 class="mb-0">{{ edu.degree }}</h3>
+                    <h4 class="text-primary">{{ edu.school }}</h4>
                     <ul>
-                        <li>Graduated with Honours</li>
-                        <li>Completed 3 years of full-time studies</li>
+                        <li *ngFor="let highlight of edu.highlights">{{ highlight }}</li>
                     </ul>
+                    <hr *ngIf="!last">
                 </div>
             </accordion-group>
-            <accordion-group heading="Work Experience">
 
-            </accordion-group>
-            <accordion-group heading="Volunteering">
+            <!-- Accordion group for Experience -->
+            <accordion-group [(isOpen)]="isExperienceOpen">
+                <button class="btn justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Experience</div>
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isExperienceOpen" style="color: white;">></div>
+                        <div *ngIf="isExperienceOpen" style="color: white;">v</div>
+                    </div>
+                </button>
 
+                <!-- Loop through each experience entry -->
+                <div *ngFor="let exp of resume.experience; let i = index; let last = last" style="text-align: left;">
+                    <h3 class="mb-0">{{ exp.position }}</h3>
+                    <h4 class="text-primary mb-0">{{ exp.company }}</h4>
+                    <h6 class="text-secondary">{{ exp.dates }}</h6>
+                    <ul>
+                        <li *ngFor="let highlight of exp.highlights">{{ highlight }}</li>
+                    </ul>
+                    <hr *ngIf="!last">
+                </div>
             </accordion-group>
-            <accordion-group heading="Certifications">
 
-            </accordion-group>
-            <accordion-group heading="Skills">
+            <!-- Accordion group for Certifications -->
+            <accordion-group [(isOpen)]="isCertificationsOpen">
+                <button class="btn justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Certifications</div>
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isCertificationsOpen" style="color: white;">></div>
+                        <div *ngIf="isCertificationsOpen" style="color: white;">v</div>
+                    </div>
+                </button>
 
+                <!-- Loop through each certification entry -->
+                <div *ngFor="let cert of resume.certifications; let i = index; let last = last"
+                    style="text-align: left;">
+                    <h3 class="mb-0">
+                        <a [href]="cert.link" class="cert-link">{{ cert.name }}</a>
+                    </h3>
+                    <h4 class="text-primary mb-0">{{ cert.institution }}</h4>
+                    <h6 class="text-secondary">{{ cert.date }}</h6>
+                    <div class="row">
+                        <div *ngFor="let skill of cert.skills" class="col-md-4">
+                            <ul class="mt-0 mb-2">
+                                <li>{{ skill }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr *ngIf="!last">
+                </div>
             </accordion-group>
+
+            <!-- Accordion group for Skills -->
+            <accordion-group [(isOpen)]="isSkillsOpen">
+                <button class="btn justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Skills</div>
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isSkillsOpen" style="color: white;">></div>
+                        <div *ngIf="isSkillsOpen" style="color: white;">v</div>
+                    </div>
+                </button>
+
+                <!-- Loop through each skill type and its skills -->
+                <div class="row">
+                    <div class="col" *ngFor="let skillType of keys()">
+                        <h3>{{ skillType[0] }}</h3>
+                        <ul>
+                            <li *ngFor="let skill of skillType[1]" class="mt-1 mb-1" style="font-size: 17px;">
+                                <img [src]="skill.logo" style="width: 20px; height: 17px;">
+                                {{ skill.name }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </accordion-group>
+
         </accordion>
     </div>
 </div>

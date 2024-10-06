@@ -4,11 +4,11 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class GetProjectService {
+export class GetResumeService {
   constructor(private http: HttpClient) { }
 
-  getProject() {
-    let url = 'assets/data/projects.json'; // Path to the project data JSON file
-    return this.http.get<any[]>(url);
+  getResume() {
+    let url = 'assets/data/resume.json'; // Path to the resume data JSON file
+    return this.http.get(url);
   }
 }

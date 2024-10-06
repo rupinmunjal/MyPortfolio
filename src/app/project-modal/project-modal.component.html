@@ -1,25 +1,35 @@
 <div class="modal-header">
+    <!-- Modal header with project title -->
     <h2>{{ project.title }}</h2>
+    <!-- Button to close the modal -->
     <button class="btn-close" (click)="modalRef.hide()"></button>
 </div>
+
 <div class="modal-body">
+    <!-- Carousel for displaying project images -->
     <carousel>
         <slide *ngFor="let img of project.imgs">
+            <!-- Image for the project -->
             <img [src]="img" alt="Image for {{ project.title }}" class="w-100 border border-dark border-opacity-75 border-3"> <!-- Project image -->
         </slide>
     </carousel>
+
+    <!-- Section for project description -->
     <h3 class="mt-2">Description</h3>
-    <p>{{ project.modalDescription }}</p>
+    <p>{{ project.modalDescription }}</p> <!-- Displaying project modal description -->
+
+    <!-- Buttons for live preview and GitHub link -->
     <div class="d-flex justify-content-center">
         <a class="btn btn-success me-5" [href]="project.links.livePreview" target="_blank">Live Preview</a> <!-- Live Preview button -->
         <a class="btn btn-dark me-5" [href]="project.links.github" target="_blank">GitHub</a> <!-- GitHub button -->
     </div>
 
-    <hr>
+    <hr> <!-- Horizontal line for separation -->
 
+    <!-- Section for displaying project tags -->
     <div class="d-flex justify-content-center">
         <div *ngFor="let tag of project.tags" class="tag me-5 modal-tag" [ngStyle]="{'background-color': getTagColor(tag)}">
-            {{ tag }}
+            {{ tag }} <!-- Displaying project tags with dynamic background color -->
         </div>
     </div>
 </div>
