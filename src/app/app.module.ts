@@ -9,6 +9,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
@@ -53,7 +54,8 @@ const approutes: Routes = [
     RouterModule.forRoot(approutes),
     HttpClientModule,
     ModalModule.forRoot(),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    AccordionModule.forRoot()
   ],
   bootstrap: [AppComponent]
 })

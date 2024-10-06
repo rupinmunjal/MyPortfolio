@@ -7,6 +7,8 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./resume.component.css']
 })
 export class ResumeComponent {
+  isEducationOpen: boolean = false;
+
   constructor(private titleService: Title, private renderer: Renderer2) {
     this.titleService.setTitle('Rupin Munjal | Resume');
   }
@@ -15,7 +17,15 @@ export class ResumeComponent {
     const link = this.renderer.createElement('a');
     link.setAttribute('target', '_blank');
     link.setAttribute('href', '../../assets/resume.pdf');
-    link.setAttribute('download', 'resume.pdf');
+    link.setAttribute('download', 'Rupin Resume.pdf');
+    link.click();
+    link.remove();
+  }
+  
+  viewResume() {
+    const link = this.renderer.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', '../../assets/resume.pdf');
     link.click();
     link.remove();
   }
