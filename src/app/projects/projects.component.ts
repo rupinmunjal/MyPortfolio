@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Title } from '@angular/platform-browser';
+import { GetProjectService } from '../services/get-project.service';
 
 @Component({
   selector: 'app-projects',
@@ -9,16 +9,19 @@ import { Title } from '@angular/platform-browser';
 })
 
 export class ProjectsComponent {
-  constructor(private http: HttpClient, private titleService: Title) {
+  constructor(
+    private titleService: Title, // Injecting the Title service to manage the page title
+    private getProjectService: GetProjectService // Injecting the service to get project data
+  ) {
     this.titleService.setTitle("Rupin Munjal | Projects"); // Set the page title
   }
 
   projects!: any; // Variable to hold project data
 
+  // Method to fetch project data from the service
   getProject() {
-    let url = 'assets/data/projects.json'; // URL for the project data
-    this.http.get<any[]>(url).subscribe((res) => {
-      this.projects = res; // Assign fetched data to projects
+    this.getProjectService.getProject().subscribe((res) => {
+      this.projects = res; // Assigning the fetched data to the projects variable
     });
   }
 

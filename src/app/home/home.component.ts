@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { HttpClient } from '@angular/common/http';
+import { GetContentService } from '../services/get-content.service';
+import { GetProjectService } from '../services/get-project.service';
 
 @Component({
   selector: 'app-home',
@@ -9,33 +10,35 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class HomeComponent {
-  constructor(private titleService: Title, private http: HttpClient) {
-    this.titleService.setTitle('Rupin Munjal | Home'); // Set page title in the constructor
+  constructor(
+    private titleService: Title, // Injecting the Title service to manage the page title
+    private getContentService: GetContentService, // Injecting the service to get personal content
+    private getProjectService: GetProjectService // Injecting the service to get project data
+  ) {
+    this.titleService.setTitle('Rupin Munjal | Home'); // Set the page title in the constructor
   }
 
   personal!: any; // Variable to store personal information fetched from JSON
   featuredProject!: any; // Variable to store featured project data fetched from JSON
   projectIndex: number = 0; // Index of the featured project to display
 
-  // Fetch personal data from a JSON file
+  // Method to fetch personal data from a JSON file
   getContent() {
-    let url = 'assets/data/content.json'; // Path to the personal data JSON file
-    this.http.get(url).subscribe((res) => {
-      this.personal = res; // Store fetched data in the personal variable
+    this.getContentService.getContent().subscribe((res) => {
+      this.personal = res; // Assigning the fetched data to the personal variable
     });
   }
 
-  // Fetch project data from a JSON file
+  // Method to fetch project data from a JSON file
   getProject() {
-    let url = 'assets/data/projects.json'; // Path to the projects JSON file
-    this.http.get<any[]>(url).subscribe((res) => {
-      this.featuredProject = res[this.projectIndex]; // Store the specific project data in featuredProject
+    this.getProjectService.getProject().subscribe((res) => {
+      this.featuredProject = res[this.projectIndex]; // Fetching the project using the specified index
     });
   }
 
   ngOnInit() {
     // Call methods to fetch content when the component initializes
-    this.getContent();
-    this.getProject();
+    this.getContent(); // Fetch personal information
+    this.getProject(); // Fetch featured project information
   }
 }
