@@ -1,29 +1,24 @@
 <div class="card shadow-lg text-center" style="max-width: 350px; min-width: 350px;">
     <carousel>
         <slide *ngFor="let img of project.imgs">
-            <!-- Project image with dynamic source and alt text -->
-            <img [src]="img" alt="Image for {{ project.title }}" class="d-block w-100">
+            <img [src]="img" alt="Image for {{ project.title }}" class="w-100"> <!-- Project image -->
         </slide>
     </carousel>
-    <div class="card-body">
-        <h4 class="card-title">{{ project.title }}</h4>
-        <h6 class="card-subtitle mt-3 mb-3 text-muted">{{ project.subtitle }}</h6>
-        <div class="d-flex justify-content-around">
-            <!-- Button for Live Preview -->
-            <a class="btn btn-success" href="{{ project.liveLink }}" target="_blank">Live Preview</a>
 
-            <!-- Button for GitHub link -->
-            <a class="btn btn-dark" href="{{ project.githubLink }}" target="_blank">GitHub</a>
-            
-            <!-- Button for opening modal -->
-            <button class="btn btn-info" (click)="openProjectModal()">View More</button>
+    <div class="card-body">
+        <h4 class="card-title">{{ project.title }}</h4> <!-- Project title -->
+        <h6 class="card-subtitle mt-3 mb-3 text-muted">{{ project.subtitle }}</h6> <!-- Project subtitle -->
+        <div class="d-flex justify-content-around">
+            <a class="btn btn-success" [href]="project.links.livePreview" target="_blank">Live Preview</a> <!-- Live Preview button -->
+            <a class="btn btn-dark" [href]="project.links.github" target="_blank">GitHub</a> <!-- GitHub button -->
+            <button class="btn btn-info" (click)="openProjectModal()">View More</button> <!-- Button to view more details -->
         </div>
     </div>
+
     <div class="card-footer">
-        <div class="d-flex flex-wrap justify-content-center">
-            <div *ngFor="let tag of project.tags" class="tag me-2 mb-1"
-                [ngStyle]="{'background-color': getTagColor(tag)}">
-                {{ tag }}
+        <div class="d-flex flex-wrap justify-content-center m-2">
+            <div *ngFor="let tag of project.tags" class="tag me-2" [ngStyle]="{'background-color': getTagColor(tag)}">
+                {{ tag }} <!-- Display project tags with dynamic background color -->
             </div>
         </div>
     </div>

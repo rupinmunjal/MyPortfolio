@@ -4,64 +4,10 @@
         "title": "Car Dealership Management System",
         "subtitle": "A web platform for managing car listings",
         "description": "A responsive web application built using Spring Boot for backend and HTML/CSS for frontend, allowing users to easily add, remove, and manage car listings in a user-friendly interface.",
-        "projectLink": "link",
-        "imgs": [
-            "assets/images/projects/img1.png",
-            "assets/images/projects/img1.png"
-        ],
-        "tags": [
-            "Spring Boot",
-            "Java"
-        ]
-    },
-    {
-        "id": 2,
-        "title": "Car Dealership Management System",
-        "subtitle": "A web platform for managing car listings",
-        "description": "A responsive web application built using Spring Boot for backend and HTML/CSS for frontend, allowing users to easily add, remove, and manage car listings in a user-friendly interface.",
-        "projectLink": "link",
-        "img": "assets/images/img1.png",
-        "tags": [
-            "Spring Boot",
-            "Java"
-        ]
-    },
-    {
-        "id": 1,
-        "title": "Car Dealership Management System",
-        "subtitle": "A web platform for managing car listings",
-        "description": "A responsive web application built using Spring Boot for backend and HTML/CSS for frontend, allowing users to easily add, remove, and manage car listings in a user-friendly interface.",
-        "projectLink": "link",
-        "imgs": [
-            "assets/images/projects/img1.png",
-            "assets/images/projects/img1.png"
-        ],
-        "tags": [
-            "Spring Boot",
-            "Java"
-        ]
-    },
-    {
-        "id": 1,
-        "title": "Car Dealership Management System",
-        "subtitle": "A web platform for managing car listings",
-        "description": "A responsive web application built using Spring Boot for backend and HTML/CSS for frontend, allowing users to easily add, remove, and manage car listings in a user-friendly interface.",
-        "projectLink": "link",
-        "imgs": [
-            "assets/images/projects/img1.png",
-            "assets/images/projects/img1.png"
-        ],
-        "tags": [
-            "Spring Boot",
-            "Java"
-        ]
-    },
-    {
-        "id": 1,
-        "title": "Car Dealership Management System",
-        "subtitle": "A web platform for managing car listings",
-        "description": "A responsive web application built using Spring Boot for backend and HTML/CSS for frontend, allowing users to easily add, remove, and manage car listings in a user-friendly interface.",
-        "projectLink": "link",
+        "links": {
+            "livePreview": "https://www.github.com/rupinmunjal/",
+            "github": "https://www.github.com/rupinmunjal/"
+        },
         "imgs": [
             "assets/images/projects/img1.png",
             "assets/images/projects/img1.png"

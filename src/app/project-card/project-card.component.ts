@@ -8,25 +8,31 @@ import { ProjectModalComponent } from '../project-modal/project-modal.component'
   templateUrl: './project-card.component.html',
   styleUrls: ['./project-card.component.css']
 })
+
 export class ProjectCardComponent {
-  @Input() project!: any;
+  @Input() project!: any; // Input property to receive project data
 
-  modalRef?: BsModalRef;
+  modalRef?: BsModalRef; // Reference for the modal
 
-  constructor(private tagColorService: TagColorService, private modalService: BsModalService) { } // Inject the service
+  // Constructor to inject dependencies
+  constructor(
+    private tagColorService: TagColorService, // Inject TagColorService for tag colors
+    private modalService: BsModalService // Inject modal service to manage modals
+  ) { }
 
+
+  // Opens the project modal with the project's details.
   openProjectModal() {
     const modalOptions: ModalOptions = {
-      class: "modal-lg",
+      class: "modal-lg", // Set modal size
       initialState: {
-        project: this.project
+        project: this.project // Pass the current project data to the modal
       }
     };
-  
-    this.modalRef = this.modalService.show(ProjectModalComponent, modalOptions);
-  }  
+    this.modalRef = this.modalService.show(ProjectModalComponent, modalOptions); // Show the modal
+  }
 
   getTagColor(tag: string) {
-    return this.tagColorService.getTagColor(tag);
+    return this.tagColorService.getTagColor(tag); // Return the color from the TagColorService
   }
 }
