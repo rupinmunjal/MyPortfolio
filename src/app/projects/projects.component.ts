@@ -8,21 +8,21 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./projects.component.css']
 })
 
-export class ProjectsComponent{
+export class ProjectsComponent {
   constructor(private http: HttpClient, private titleService: Title) {
-    this.titleService.setTitle("Rupin Munjal | Projects");
+    this.titleService.setTitle("Rupin Munjal | Projects"); // Set the page title
   }
 
-  projects!: any;
+  projects!: any; // Variable to hold project data
 
   getProject() {
-    let url = 'assets/data/projects.json';
+    let url = 'assets/data/projects.json'; // URL for the project data
     this.http.get<any[]>(url).subscribe((res) => {
-      this.projects = res;
+      this.projects = res; // Assign fetched data to projects
     });
   }
 
   ngOnInit() {
-    this.getProject();
+    this.getProject(); // Fetch project data on component initialization
   }
 }
