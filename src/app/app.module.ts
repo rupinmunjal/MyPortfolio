@@ -11,7 +11,6 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 
-import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
@@ -24,7 +23,6 @@ import { ProjectModalComponent } from './project-modal/project-modal.component';
 
 const approutes: Routes = [
   { path: 'home', component: HomeComponent},
-  { path: 'about', component: AboutComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'resume', component: ResumeComponent },
   { path: 'contact', component: ContactComponent },
@@ -34,7 +32,6 @@ const approutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
     HeaderComponent,
     FooterComponent,
     ContactComponent,

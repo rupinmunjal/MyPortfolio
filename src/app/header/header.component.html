@@ -1,7 +1,18 @@
-<!-- Jumbotron displaying name and occupation -->
-<div class="jumbotron">
+<!-- Jumbotron displaying user profile information -->
+<div class="jumbotron" style="position: relative;">
+
+    <!-- Section for displaying user's name and occupation -->
     <div class="text-center">
         <h1 class="display-4" style="font-weight: 400;">{{ personal.name }}</h1>
         <h3>{{ personal.occupation }}</h3>
+    </div>
+
+    <!-- Positioned container for social media contact icons -->
+    <div class="position-absolute bottom-0 end-0 d-flex p-2">
+        <div *ngFor="let contact of personal.contacts">
+            <a [href]="contact.href" target="_blank">
+                <img [src]="contact.img" alt="{{ contact.title }} Icon" class="rounded-circle me-2 icon-size">
+            </a>
+        </div>
     </div>
 </div>
