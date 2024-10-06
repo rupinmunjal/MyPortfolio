@@ -9,31 +9,33 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class HomeComponent {
-  constructor(private titleService: Title, private http: HttpClient){
-    this.titleService.setTitle('Rupin Munjal | Home'); // Setting the page title in the constructor
+  constructor(private titleService: Title, private http: HttpClient) {
+    this.titleService.setTitle('Rupin Munjal | Home'); // Set page title in the constructor
   }
 
-  personal!: any; // Variable to hold personal data
-  featuredProject!: any; // Variable to hold project data
+  personal!: any; // Variable to store personal information fetched from JSON
+  featuredProject!: any; // Variable to store featured project data fetched from JSON
+  projectIndex: number = 0; // Index of the featured project to display
 
-  // Method to fetch content from a JSON file
+  // Fetch personal data from a JSON file
   getContent() {
-    let url = 'assets/data/content.json'; // URL to the JSON file
+    let url = 'assets/data/content.json'; // Path to the personal data JSON file
     this.http.get(url).subscribe((res) => {
-      this.personal = res; // Assigning the response to the personal variable
+      this.personal = res; // Store fetched data in the personal variable
     });
   }
 
+  // Fetch project data from a JSON file
   getProject() {
-    const projectIndex = 1; // Set your desired project index here
-    let url = 'assets/data/projects.json';
+    let url = 'assets/data/projects.json'; // Path to the projects JSON file
     this.http.get<any[]>(url).subscribe((res) => {
-      this.featuredProject = res[projectIndex];
+      this.featuredProject = res[this.projectIndex]; // Store the specific project data in featuredProject
     });
   }
 
   ngOnInit() {
-    this.getContent(); // Fetch content when the component initializes
+    // Call methods to fetch content when the component initializes
+    this.getContent();
     this.getProject();
   }
 }

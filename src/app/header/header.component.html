@@ -11,7 +11,7 @@
     <div class="position-absolute bottom-0 end-0 d-flex p-2">
         <div *ngFor="let contact of personal.contacts">
             <a [href]="contact.href" target="_blank">
-                <img [src]="contact.img" alt="{{ contact.title }} Icon" class="rounded-circle me-2 icon-size">
+                <img [src]="contact.img" alt="{{ contact.title }} Icon" class="rounded-circle me-2" style="height: 32px; width: 32px;">
             </a>
         </div>
     </div>

@@ -2,6 +2,7 @@
 	"name": "Rupin Munjal",
 	"occupation": "Full Stack Developer",
 	"about": "I am currently pursuing an advanced diploma in Software Development and Network Engineering at Sheridan College. Alongside this, I'm working towards a Bachelor's degree in Programming and Data Science from IIT Madras. I'm also a Full-stack Developer Intern at Samskrita Bharati, where I contribute to open-source projects and develop full-stack applications during my co-op term. I've had hands-on experience working with AWS and am passionate about cloud computing. I'm continuously learning more in this area to deepen my expertise and leverage AWS for innovative solutions.",
+	"img": "assets/images/my-pic.jpg",
 	"contacts": [
 		{
 			"title": "LinkedIn",

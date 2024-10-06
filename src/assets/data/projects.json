@@ -5,7 +5,10 @@
         "subtitle": "A web platform for managing car listings",
         "description": "A responsive web application built using Spring Boot for backend and HTML/CSS for frontend, allowing users to easily add, remove, and manage car listings in a user-friendly interface.",
         "projectLink": "link",
-        "imgSrc": "assets/images/img1.png",
+        "imgs": [
+            "assets/images/img1.png",
+            "assets/images/img1.png"
+        ],
         "tags": [
             "Spring Boot",
             "Java"
@@ -17,7 +20,7 @@
         "subtitle": "A web platform for managing car listings",
         "description": "A responsive web application built using Spring Boot for backend and HTML/CSS for frontend, allowing users to easily add, remove, and manage car listings in a user-friendly interface.",
         "projectLink": "link",
-        "imgSrc": "assets/images/img1.png",
+        "img": "assets/images/img1.png",
         "tags": [
             "Spring Boot",
             "Java"
