@@ -9,7 +9,6 @@ import { Title } from '@angular/platform-browser';
 })
 export class ContactComponent {
   content!: any;
-  contacts!: any[];
 
   constructor(private titleService: Title, private http: HttpClient) {
     this.titleService.setTitle('Rupin Munjal | Contact');
@@ -19,7 +18,6 @@ export class ContactComponent {
     let url = 'assets/data/content.json';
     this.http.get(url).subscribe((res) => {
       this.content = res;
-      this.contacts = this.content.contacts;
     });
   }
 
