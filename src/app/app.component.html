@@ -1,13 +1,30 @@
-<div [ngClass]="{ 'dark-mode': darkMode, 'light-mode': !darkMode }">
-  <mat-checkbox [(ngModel)]="darkMode" (change)="toggleDarkMode()">
-    Dark Mode
-  </mat-checkbox>
-  <div class="shadow">
-    <app-header></app-header>
-    <app-nav></app-nav>
+<div>
+  <!-- Wrapper div for the overall layout -->
+  <div [ngClass]="{ 'dark-mode': darkMode, 'light-mode': !darkMode }">
+    <!-- Apply 'dark-mode' or 'light-mode' class based on the darkMode boolean -->
+
+    <div class="shadow">
+      <!-- Shadow effect for the header area -->
+      <app-header></app-header>
+      <!-- Header component displaying the site title/navigation -->
+
+      <div class="top-0 end-0 position-fixed mt-3 me-3">
+        <!-- Positioning the dark mode toggle in the top right corner -->
+        <app-dark-mode [(darkMode)]="darkMode"></app-dark-mode>
+        <!-- Dark mode toggle component, bound to the darkMode property -->
+      </div>
+
+      <app-nav></app-nav>
+      <!-- Navigation component for site links -->
+    </div>
+
+    <span class="shadow">
+      <!-- Shadow effect for the router outlet area -->
+      <router-outlet></router-outlet>
+      <!-- Router outlet for displaying routed components -->
+    </span>
+
+    <app-footer></app-footer>
+    <!-- Footer component displaying copyright and other links -->
   </div>
-  <span class="shadow-lg">
-    <router-outlet></router-outlet>
-  </span>
-  <app-footer></app-footer>
 </div>
