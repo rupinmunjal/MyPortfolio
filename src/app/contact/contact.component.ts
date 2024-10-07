@@ -1,6 +1,6 @@
-import { Component,Input } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, Input } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { GetContentService } from '../services/get-content.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,20 +8,22 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-  content!: any;
+  personal!: any; // Variable to hold personal contact information
 
-  constructor(private titleService: Title, private http: HttpClient) {
+  constructor(private titleService: Title, private getContentService: GetContentService) {
+    // Set the document title for the contact page
     this.titleService.setTitle('Rupin Munjal | Contact');
-  }  
+  }
 
+  // Method to fetch personal content from the service
   getContent() {
-    let url = 'assets/data/content.json';
-    this.http.get(url).subscribe((res) => {
-      this.content = res;
+    this.getContentService.getContent().subscribe((res) => {
+      this.personal = res; // Store the fetched personal contact information
     });
   }
 
-  ngOnInit(){
-    this.getContent();
+  // Lifecycle hook to initialize the component and fetch content
+  ngOnInit() {
+    this.getContent(); // Call method to get personal contact information when the component initializes
   }
 }

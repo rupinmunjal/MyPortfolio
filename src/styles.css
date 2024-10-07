@@ -17,3 +17,16 @@ body {
     background-color: blue;
     color: white;
 }
+
+/* Link styling for certifications */
+.a-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+/* Hover effect for certification links */
+.a-link:hover {
+    text-decoration: underline;
+    color: #007bff;
+}

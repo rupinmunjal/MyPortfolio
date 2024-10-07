@@ -7,16 +7,3 @@ accordion-group::ng-deep .btn-link {
 accordion-group::ng-deep .card-header {
     background-color: #007bff;
 }
-
-/* Link styling for certifications */
-.cert-link {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s, text-decoration 0.3s;
-}
-
-/* Hover effect for certification links */
-.cert-link:hover {
-    text-decoration: underline;
-    color: #007bff;
-}
