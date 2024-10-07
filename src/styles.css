@@ -1,12 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles for the body */
 body {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
+/* Container styles with a maximum width */
 .container {
     max-width: 1200px;
 }
 
+/* Styles for tags */
 .tag {
     padding: 0 20px;
     height: 30px;

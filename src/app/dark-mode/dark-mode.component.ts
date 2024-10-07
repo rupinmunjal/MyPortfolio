@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class DarkModeComponent {
   // Input property to receive the current dark mode state from the parent component
-  @Input() darkMode: boolean = false;
+  @Input() darkMode!: boolean;
 
   // Output event emitter to notify the parent component about changes to the dark mode state
   @Output() darkModeChange = new EventEmitter();

@@ -1,18 +1,11 @@
-  /* Dark Mode Styles */
+/* Dark Mode Styles */
 .dark-mode {
-  background-color: #333;
-  color: white;
+  background-color: #2d2d2d; /* Deep gray background for improved contrast */
+  color: rgb(187, 199, 228); /* Light text color for better readability */
 }
 
 /* Light Mode Styles */
 .light-mode {
-  background-color: white;
-  color: black;
-}
-
-mat-checkbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10vh; /* Adjust height as needed */
+  background-color: #f3ffff; /* Soft white background for a clean appearance */
+  color: black; /* Standard text color for visibility */
 }

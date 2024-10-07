@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { GetContentService } from '../services/get-content.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,18 +7,15 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  footerText: string = "Used HTML, CSS and TypeScript in Angular";
+  footerText: string = "Created with Angular, utilizing HTML, CSS, and TypeScript";
 
-  content!: any;
-  name!: string;
+  personal!: any;
 
-  constructor( private http: HttpClient) { }
+  constructor(private getContentService: GetContentService) { }
 
   getContent() {
-    let url = 'assets/data/content.json';
-    this.http.get(url).subscribe((res) => {
-      this.content = res;
-      this.name = this.content.name;
+    this.getContentService.getContent().subscribe((res) => {
+      this.personal = res;
     });
   }
 
