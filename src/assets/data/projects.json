@@ -10,8 +10,9 @@
             "github": "https://www.github.com/rupinmunjal/"
         },
         "imgs": [
-            "assets/images/projects/img1.png",
-            "assets/images/projects/img1.png"
+            "assets/images/projects/car-dealership/img1.jpeg",
+            "assets/images/projects/car-dealership/img2.png",
+            "assets/images/projects/car-dealership/img3.svg"
         ],
         "tags": [
             "Spring Boot",
