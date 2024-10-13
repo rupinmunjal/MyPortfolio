@@ -7,7 +7,7 @@
         "modalDescription": "A responsive web application built using Spring Boot for backend and HTML/CSS for frontend, allowing users to easily add, remove, and manage car listings in a user-friendly interface.",
         "links": {
             "livePreview": "https://www.github.com/rupinmunjal/",
-            "github": "https://www.github.com/rupinmunjal/"
+            "github": "https://github.com/rupinmunjal/CarDealership"
         },
         "imgs": [
             "assets/images/projects/car-dealership/img1.jpeg",

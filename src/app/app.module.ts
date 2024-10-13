@@ -20,7 +20,6 @@ import { ResumeComponent } from './resume/resume.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { ProjectModalComponent } from './project-modal/project-modal.component';
-import { DarkModeComponent } from './dark-mode/dark-mode.component';
 
 const approutes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -42,7 +41,6 @@ const approutes: Routes = [
     HomeComponent,
     ProjectCardComponent,
     ProjectModalComponent,
-    DarkModeComponent,
   ],
   imports: [
     BrowserModule,

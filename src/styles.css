@@ -1,11 +1,12 @@
 /* Global styles for the body */
 body {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    color: #48464c;
 }
 
 /* Container styles with a maximum width */
 .container {
-    max-width: 1200px;
+    max-width: 80%;
 }
 
 /* Styles for tags */
@@ -16,19 +17,5 @@ body {
     font-size: 14px;
     line-height: 30px;
     border-radius: 25px;
-    background-color: blue;
     color: white;
-}
-
-/* Link styling for certifications */
-.a-link {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s, text-decoration 0.3s;
-}
-
-/* Hover effect for certification links */
-.a-link:hover {
-    text-decoration: underline;
-    color: #007bff;
 }
