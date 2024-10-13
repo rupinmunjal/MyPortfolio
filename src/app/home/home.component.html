@@ -22,7 +22,7 @@
             <carousel>
                 <slide *ngFor="let img of featuredProject.imgs">
                     <!-- Project image with dynamic source and alt text -->
-                    <img [src]="img" alt="Image for {{ featuredProject.title }}" class="d-block w-100">
+                    <img [src]="img" alt="Image for {{ featuredProject.title }}" class="d-block w-100 border border-dark border-opacity-75 border-3" style="height: 350px;">
                 </slide>
             </carousel>
             <div class="m-3">
