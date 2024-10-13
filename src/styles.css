@@ -19,3 +19,15 @@ body {
     border-radius: 25px;
     color: white;
 }
+
+/* Link styling for certifications */
+.a-link {
+    text-decoration: underline;
+    color: #504ded;
+    transition: color 0.3s;
+}
+
+/* Hover effect for certification links */
+.a-link:hover {
+    color: #a1ebde;
+}

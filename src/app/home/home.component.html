@@ -5,7 +5,8 @@
             <div class="text-center m-4">
                 <h2>About Me</h2>
                 <!-- Profile image with dynamic source and alt text -->
-                <img [src]="personal.img" alt="Profile picture of {{ personal.name }}" class="rounded-circle mt-2 border border-2 border-dark w-50">
+                <img [src]="personal.img" alt="Profile picture of {{ personal.name }}"
+                    class="rounded-circle mt-2 border border-2 border-dark w-50">
                 <!-- Personal description -->
                 <p class="m-3">{{ personal.about }}</p>
             </div>
@@ -22,14 +23,16 @@
             <carousel>
                 <slide *ngFor="let img of featuredProject.imgs">
                     <!-- Project image with dynamic source and alt text -->
-                    <img [src]="img" alt="Image for {{ featuredProject.title }}" class="d-block w-100 border border-dark border-opacity-75 border-3" style="height: 350px;">
+                    <img [src]="img" alt="Image for {{ featuredProject.title }}"
+                        class="d-block w-100 border border-dark border-opacity-75 border-3 rounded-1"
+                        style="height: 350px;">
                 </slide>
             </carousel>
             <div class="m-3">
                 <!-- Project description -->
                 <p>{{ featuredProject.description }}</p>
                 <!-- Call to action for visiting the portfolio section -->
-                <p>Visit the Portfolio section for more details.</p>
+                <p>Visit the <a routerLink="/projects" class="a-link">Projects</a> section for more details.</p>
             </div>
         </div>
     </div>

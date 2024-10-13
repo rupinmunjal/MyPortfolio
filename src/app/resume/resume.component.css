@@ -1,22 +1,14 @@
-/* Button link color */
+/* Resume Button */
+.resume-button {
+    background-color: #a1ebde;
+}
+
+/* Button link size */
 accordion-group::ng-deep .btn-link {
-    color: white;
+    font-size: 18px;
 }
 
 /* Card header background */
 accordion-group::ng-deep .card-header {
-    background-color: #007bff;
-}
-
-/* Link styling for certifications */
-.a-link {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s, text-decoration 0.3s;
-}
-
-/* Hover effect for certification links */
-.a-link:hover {
-    text-decoration: underline;
-    color: #007bff;
+    background-color: #a1ebde;
 }
