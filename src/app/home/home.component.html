@@ -3,10 +3,10 @@
         <!-- About Me Section -->
         <div class="col-md shadow m-2">
             <div class="text-center m-4">
-                <h2>About Me</h2>
+                <h2 class="text-dark">About Me</h2>
                 <!-- Profile image with dynamic source and alt text -->
                 <img [src]="personal.img" alt="Profile picture of {{ personal.name }}"
-                    class="rounded-circle mt-2 border border-2 border-dark w-50">
+                    class="rounded-circle mt-2 border border-dark border-opacity-75 border-3 w-50">
                 <!-- Personal description -->
                 <p class="m-3">{{ personal.about }}</p>
             </div>
@@ -15,9 +15,9 @@
         <!-- Featured Project Section -->
         <div class="col-md shadow m-2">
             <div class="text-center m-4">
-                <h2>Featured Project</h2>
+                <h2 class="text-dark">Featured Project</h2>
                 <!-- Dynamic project title -->
-                <h4>{{ featuredProject.title }}</h4>
+                <h4 class="text-secondary">{{ featuredProject.title }}</h4>
             </div>
             <!-- Carousel for displaying project images -->
             <carousel>
