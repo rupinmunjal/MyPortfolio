@@ -11,23 +11,10 @@ body {
 
 /* Styles for tags */
 .tag {
-    padding: 0 20px;
-    height: 30px;
+    height: 32px;
+    padding: 4px 15px 0px;
     width: fit-content;
     font-size: 14px;
-    line-height: 30px;
     border-radius: 25px;
     color: white;
-}
-
-/* Link styling for certifications */
-.a-link {
-    text-decoration: underline;
-    color: #504ded;
-    transition: color 0.3s;
-}
-
-/* Hover effect for certification links */
-.a-link:hover {
-    color: #a1ebde;
 }

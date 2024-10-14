@@ -35,11 +35,11 @@ export class ResumeComponent {
   }
 
   downloadResume() {
-    this.createLink('../../assets/resume.pdf', 'Rupin Resume.pdf', true); // Initiate download of the resume
+    this.createLink('../../assets/rupin_resume.pdf', 'Rupin Resume.pdf', true); // Initiate download of the resume
   }
 
   viewResume() {
-    this.createLink('../../assets/resume.pdf', '', false); // Open resume in a new tab
+    this.createLink('../../assets/rupin_resume.pdf', '', false); // Open resume in a new tab
   }
 
   private createLink(href: string, filename: string, download: boolean) {

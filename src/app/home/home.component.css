@@ -1,0 +1,11 @@
+/* Link styling for Projects */
+.a-link {
+    text-decoration: underline;
+    color: #504ded;
+    transition: color 0.3s;
+}
+
+/* Hover effect for Projects */
+.a-link:hover {
+    color: #a1ebde;
+}

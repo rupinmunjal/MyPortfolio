@@ -16,7 +16,9 @@
         ],
         "tags": [
             "Spring Boot",
-            "Java"
+            "Java",
+            "SQL",
+            "Docker"
         ]
     }
 ]
