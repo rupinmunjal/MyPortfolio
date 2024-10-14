@@ -28,14 +28,14 @@ export class ResumeComponent {
     this.getResume(); // Fetch resume data when the component initializes
   }
 
-  private getResume() {
+  getResume() {
     this.getResumeService.getResume().subscribe(res => {
       this.resume = res; // Store fetched resume data
     });
   }
 
   downloadResume() {
-    this.createLink('../../assets/rupin_resume.pdf', 'Rupin Resume.pdf', true); // Initiate download of the resume
+    this.createLink('../../assets/rupin_resume.pdf', 'rupin_resume', true); // Initiate download of the resume
   }
 
   viewResume() {
