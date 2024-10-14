@@ -23,8 +23,8 @@
 
                 <!-- Loop through each education entry -->
                 <div *ngFor="let edu of resume.education; let i = index; let last = last" style="text-align: left;">
-                    <h3 class="mb-0">{{ edu.degree }}</h3>
-                    <h4 class="text-primary">{{ edu.school }}</h4>
+                    <h4 class="mb-0">{{ edu.degree }}</h4>
+                    <h5>{{ edu.school }}</h5>
                     <ul>
                         <li *ngFor="let highlight of edu.highlights">{{ highlight }}</li>
                     </ul>
@@ -45,8 +45,8 @@
 
                 <!-- Loop through each experience entry -->
                 <div *ngFor="let exp of resume.experience; let i = index; let last = last" style="text-align: left;">
-                    <h3 class="mb-0">{{ exp.position }}</h3>
-                    <h4 class="text-primary mb-0">{{ exp.company }}</h4>
+                    <h4 class="mb-0">{{ exp.position }}</h4>
+                    <h5 class="mb-0">{{ exp.company }}</h5>
                     <h6 class="text-secondary">{{ exp.dates }}</h6>
                     <ul>
                         <li *ngFor="let highlight of exp.highlights">{{ highlight }}</li>
@@ -69,10 +69,10 @@
                 <!-- Loop through each certification entry -->
                 <div *ngFor="let cert of resume.certifications; let i = index; let last = last"
                     style="text-align: left;">
-                    <h3 class="mb-0">
+                    <h4 class="mb-0">
                         <a [href]="cert.link" class="a-link">{{ cert.name }}</a>
-                    </h3>
-                    <h4 class="text-primary mb-0">{{ cert.institution }}</h4>
+                    </h4>
+                    <h5 class="mb-0">{{ cert.institution }}</h5>
                     <h6 class="text-secondary">{{ cert.date }}</h6>
                     <div class="row">
                         <div *ngFor="let skill of cert.skills" class="col-md-4">
@@ -99,7 +99,7 @@
                 <!-- Loop through each skill type and its skills -->
                 <div class="row">
                     <div class="col" *ngFor="let skillType of keys()">
-                        <h3>{{ skillType[0] }}</h3>
+                        <h4>{{ skillType[0] }}</h4>
                         <ul>
                             <li *ngFor="let skill of skillType[1]" class="mt-1 mb-1" style="font-size: 17px;">
                                 <img [src]="skill.logo" style="width: 20px; height: 17px;">

@@ -12,3 +12,23 @@ accordion-group::ng-deep .btn-link {
 accordion-group::ng-deep .card-header {
     background-color: #a1ebde;
 }
+
+/* Link styling for Projects */
+.a-link {
+    text-decoration: underline;
+    color: #48464c;
+    transition: color 0.3s;
+}
+
+/* Hover effect for Projects */
+.a-link:hover {
+    color: #ffa1a1;
+}
+
+h4 {
+    color: #48464c;
+}
+
+h5 {
+    color: #504ded;
+}
