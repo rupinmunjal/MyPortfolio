@@ -21,11 +21,15 @@ import { HomeComponent } from './home/home.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { ProjectModalComponent } from './project-modal/project-modal.component';
 
+// const approutes: Routes = [
+//   { path: 'home', component: HomeComponent},
+//   { path: 'projects', component: ProjectsComponent },
+//   { path: 'resume', component: ResumeComponent },
+//   { path: 'contact', component: ContactComponent },
+//   { path: '**', component: HomeComponent, pathMatch:'full'}
+// ];
+
 const approutes: Routes = [
-  { path: 'home', component: HomeComponent},
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'resume', component: ResumeComponent },
-  { path: 'contact', component: ContactComponent },
   { path: '**', component: HomeComponent, pathMatch:'full'}
 ];
 
